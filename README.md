@@ -1,6 +1,12 @@
 # Pyrobot
 Autonomous Fire Detection and Control System
 
+![image](https://user-images.githubusercontent.com/53033119/148638814-421073b8-8d0b-4569-96a0-d8cdcd9d5fda.png)
+
+![image](https://user-images.githubusercontent.com/53033119/148638824-0110c13d-f81b-4945-9ae8-0bd315df54b7.png)
+
+
+
 
 https://user-images.githubusercontent.com/53033119/148636309-db4df57e-6fec-48a2-af16-fae7f4626ede.mp4
 
