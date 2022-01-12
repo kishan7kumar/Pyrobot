@@ -1,4 +1,4 @@
-# Pyrobot
+# Pyrobot - Autonomous Fire Detection & Control System
 
 ## Brief Description
 
