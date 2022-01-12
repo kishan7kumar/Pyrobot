@@ -30,6 +30,9 @@ https://user-images.githubusercontent.com/53033119/148638681-157c623f-2db7-4bc8-
 
 ## System Working Demonstration
 
+In this demonstration we can see that as soon as the fire is detected by the camera system the led ring attached on top of it turns green. The camera sends the message to the bot. The bot starts from its central room and using the line follower sensor it navigates to the room where fire is detected. In this demonstration we have intentionally programmed to bot to take the longer route to show its complete movement. however, in real scenarios it will take the shortest route.
+After reaching the room the robot here turns back and returns to its original position. Here, we have not used the fire extinguisher because we used our computer lab to setup the project and using the extinguisher inside the lab was not allowed. Also in the video you can see as soon as one of our teammate blows off the candle the camera system detect it instantly and turn off the alarm.
+
 https://user-images.githubusercontent.com/53033119/148638647-581d92fd-2091-4378-9e7b-6dd7a851f40e.mp4
 
 ## Android Application
