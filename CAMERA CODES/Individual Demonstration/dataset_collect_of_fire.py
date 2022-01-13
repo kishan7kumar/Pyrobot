@@ -1,3 +1,4 @@
+# This code will allow to take pictures from camera system to make dataset for training the CNN
 import pygame
 from pygame.locals import *
 from picamera import PiCamera
