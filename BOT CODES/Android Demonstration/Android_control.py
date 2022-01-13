@@ -1,13 +1,9 @@
 ''' PYROBOT ANDROID CONTROL APPLICATION '''
-''' DEVELOPED BY KISHAN KUMAR'''
 import socket
 import time
 import pyfirmata
 from pyfirmata import Arduino, util
-
-
 board = pyfirmata.ArduinoMega("/dev/ttyACM0")
-
 #voltagesensor1_pin = board.get_pin('a:4:i')   #pin 5 for 8.4V battery  and   pin4 for 12V battery
 #voltagesensor2_pin = board.get_pin('a:5:i')   #pin 5 for 8.4V battery  and   pin4 for 12V battery
 
@@ -50,8 +46,7 @@ def fan_on():
 def fan_off():
     fan_A.write(0)
     fan_B.write(0)
-     
-
+    
 def go_forward():
     FR_motor_forward.write(1)
     FR_motor_backward.write(0)
@@ -141,16 +136,12 @@ def go_backward_right():
     RR_motor_forward.write(0)
     RR_motor_backward.write(1)
 
-
 # resetting everything to default positon
 camera_xaxis_angle.write(95)  #x axis center postion
 battery_gate_angle.write(79)   #battery gate close
 camera_yaxis_angle.write(90)  #y axis center postion
 nozzle_angle.write(20)
 extinguisher_angle.write(9)
-
-
- 
 
 class BotAndroidControl(object):
     def __init__(self, host, port):
@@ -171,8 +162,7 @@ class BotAndroidControl(object):
             go_stop()
             try:
                 while True:
-                    app_command = self.connection.recv(1024).decode() #1024 is buffer size
-                    
+                    app_command = self.connection.recv(1024).decode() #1024 is buffer size 
                     #BOT CONTROL
                     if (app_command == '1'):
                         print('forward')
@@ -234,8 +224,6 @@ class BotAndroidControl(object):
                     elif (app_command == '18'):
                         print('nozzle down')
                         nozzle_angle.write(20)
-                        
-
                     #BATTERY GATE CONTROL    
                     elif (app_command == '16'):
                         print('gate open')
@@ -249,11 +237,8 @@ class BotAndroidControl(object):
                 self.connection.close()
                 self.server_socket.close()
                 break
-
-
-if __name__ == '__main__':
-    
-    h, p = "172.20.10.8", 9002  # IP ADDDRESS of BOT Raspberry Pi
+if __name__ == '__main__':  
+    h, p = "172.20.10.8", 9002  # IP ADDRESS of BOT Raspberry Pi
     print('\n\t\t*********** PYROBOT ANDROID CONTROL TEST ****************')
     print('\n\tPress any button on Android Application to start the test.......')
     #it = util.Iterator(board)
@@ -271,13 +256,6 @@ if __name__ == '__main__':
         extinguisher_angle.write(9)
         #voltagesensor1_pin.disable_reporting()
         #voltagesensor2_pin.disable_reporting()
-        
         go_stop()
         time.sleep(2)
         board.exit()
-        
-        
-   
-    
-    
-    
