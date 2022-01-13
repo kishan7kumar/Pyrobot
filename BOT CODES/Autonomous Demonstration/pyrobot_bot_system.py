@@ -131,17 +131,9 @@ def avoid_obstacle():
             voltage = round((data*5),2)
             distance = int  (306.439 + voltage * (-512.611 + voltage * (382.268 + voltage * (-129.893 + voltage * 16.2537))) ) #for 150cm range sensor
 
-
-
-
-
-
-
-
 '''BOT NAVIGATION FUNCTIONS'''
 def room_1_go():
-    
-    while True:              #BOT REACHED NODE 1
+    while True:       #BOT REACHED NODE 1
         avoid_obstacle()        
         if LF_1.read()==True and LF_2.read()==True and LF_3.read() ==True and LF_4.read()==True  and LF_5.read() ==True  and LF_6.read() ==True and LF_7.read()==True :
             print('\n\nBOT REACHED NODE 1')
@@ -153,10 +145,8 @@ def room_1_go():
         elif LF_3.read()== False  and LF_6.read()== True :              
             go_left()                       
         else:            
-            go_forward()
-            
-            
-    while True:                       # BOT REACHED NODE 2
+            go_forward()       
+    while True:      # BOT REACHED NODE 2
         avoid_obstacle()
         if LF_1.read()==True and LF_2.read()==True and LF_3.read() ==True and LF_4.read()==True  and LF_5.read() ==True  and LF_6.read() ==True and LF_7.read()==True:
             print('\n\nBOT REACHED NODE 2')
@@ -174,10 +164,8 @@ def room_1_go():
         elif  LF_3.read()== False  and LF_6.read()== True:  
             go_left()
         else:
-            go_forward()
-    
-        
-    while True:                      # BOT REACHED ROOM 1
+            go_forward() 
+    while True:     # BOT REACHED ROOM 1
         avoid_obstacle()
         
         if LF_1.read()==True and LF_2.read()==True and LF_3.read() ==True and LF_4.read()==True  and LF_5.read() ==True  and LF_6.read() ==True and LF_7.read()==True:
@@ -200,10 +188,8 @@ def room_1_go():
             go_left()       
         else:            
             go_forward()
-
-
+            
 def room_1_return():
-    
     while True: #BOT REACHED NODE 2
         avoid_obstacle()
         if LF_1.read()==True and LF_2.read()==True and LF_3.read() ==True and LF_4.read()==True  and LF_5.read() ==True  and LF_6.read() ==True and LF_7.read()==True :
@@ -223,8 +209,7 @@ def room_1_return():
             go_left()                       
         else:            
             go_forward()
-            
-            
+                     
     while True: # BOT REACHED NODE 1
         avoid_obstacle()
         if LF_1.read()==True and LF_2.read()==True and LF_3.read() ==True and LF_4.read()==True  and LF_5.read() ==True  and LF_6.read() ==True and LF_7.read()==True:
@@ -262,12 +247,9 @@ def room_1_return():
         else:
             go_forward() 
             
-            
-
-            
-def room_3_go():
-    
-    while True:              #BOT REACHED NODE 1
+                     
+def room_3_go():  
+    while True:  #BOT REACHED NODE 1
         avoid_obstacle()
         if LF_1.read()==True and LF_2.read()==True and LF_3.read() ==True and LF_4.read()==True  and LF_5.read() ==True  and LF_6.read() ==True and LF_7.read()==True :
             print('\n\nBOT REACHED NODE 1')
@@ -289,10 +271,8 @@ def room_3_go():
         elif LF_3.read()== False  and LF_6.read()== True :              
             go_left()                       
         else:            
-            go_forward()
-            
-            
-    while True:                       # BOT REACHED NODE 4
+            go_forward()          
+    while True:    # BOT REACHED NODE 4
         avoid_obstacle()
         if LF_1.read()==True and LF_2.read()==True and LF_3.read() ==True and LF_4.read()==True  and LF_5.read() ==True  and LF_6.read() ==True and LF_7.read()==True:
             print('\n\nBOT REACHED NODE 2')
@@ -314,8 +294,7 @@ def room_3_go():
         else:
             go_forward()
     
-        
-    while True:                      # BOT REACHED ROOM 3
+    while True:   # BOT REACHED ROOM 3
         avoid_obstacle()
         if LF_1.read()==True and LF_2.read()==True and LF_3.read() ==True and LF_4.read()==True  and LF_5.read() ==True  and LF_6.read() ==True and LF_7.read()==True:
             print('\n\nBOT REACHED ROOM 3')
@@ -338,10 +317,8 @@ def room_3_go():
         else:            
             go_forward()
             
-
-
 def room_3_return():
-    while True:                       # BOT REACHED NODE 4
+    while True:     # BOT REACHED NODE 4
         avoid_obstacle()
         if LF_1.read()==True and LF_2.read()==True and LF_3.read() ==True and LF_4.read()==True  and LF_5.read() ==True  and LF_6.read() ==True and LF_7.read()==True:
             print('\n\nBOT REACHED NODE 4')
@@ -363,7 +340,7 @@ def room_3_return():
         else:
             go_forward()
     
-    while True:                       # BOT REACHED NODE 1
+    while True:    # BOT REACHED NODE 1
         avoid_obstacle()
         if LF_1.read()==True and LF_2.read()==True and LF_3.read() ==True and LF_4.read()==True  and LF_5.read() ==True  and LF_6.read() ==True and LF_7.read()==True:
             print('\n\nBOT REACHED NODE 2')
@@ -387,7 +364,6 @@ def room_3_return():
     
     while True: #BOT REACHED starting position
         avoid_obstacle()
-
         if LF_1.read()==True and LF_2.read()==True and LF_3.read() ==True and LF_4.read()==True  and LF_5.read() ==True  and LF_6.read() ==True and LF_7.read()==True:
             print('\n\nBOT REACHED STARTING POSITION')
             go_stop()
@@ -409,7 +385,6 @@ def room_3_return():
         else:
             go_forward() 
             
-    
 def room_2_go():
     while True:              #BOT REACHED NODE 1
         avoid_obstacle()
