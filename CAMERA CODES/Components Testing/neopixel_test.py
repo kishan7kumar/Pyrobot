@@ -1,3 +1,4 @@
+#This was the led ring that was used to display whether the fire was detected by camera system. It turned red(fire detected) and green (no fire)
 import board
 import neopixel
 import time
