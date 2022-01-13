@@ -44,15 +44,16 @@ try:
         image = image.astype("float") / 255.0
         image = img_to_array(image)
         image = np.expand_dims(image, axis=0)
-        (pred) = model.predict_classes(image)
+        (pred) = model.predict_classes(image) #CNN predicting fire
         a = pred[[0]]
-        if(a==0):
+        if(a==0):        
             if(GPIO.input(22)):
                 text = 'KERAS: 1 --|-- SENSOR: 0'
                 frame=cv2.putText(frame,text,(10,30),cv2.FONT_HERSHEY_SIMPLEX,0.6,(0,255,0),2)
                 GPIO.output(17,1)#set buzzer OFF
                 GPIO.output(27,0)
                 pixels.fill((0, 255, 0))
+            #both CNN and flame sensor detected fire
             else:
                 text = 'KERAS: 1 --|-- SENSOR: 1'
                 frame = cv2.putText(frame,text,(10,30),cv2.FONT_HERSHEY_SIMPLEX,0.6,(0,255,0),2)
@@ -76,7 +77,6 @@ try:
                 GPIO.output(17,1) #set buzzer OFF
                 GPIO.output(27,0)
                 pixels.fill((0, 255, 0))
-                #client_socket.send('0'.encode())
         cv2.imshow("Predicting Fire", frame)
         key = cv2.waitKey(60) & 0xFF
         if key == ord("q"):
