@@ -1,3 +1,4 @@
+# Code to test RPi temperature as it get heated up quickly because of deep learning model running on it
 import os
 import time
 import cv2
